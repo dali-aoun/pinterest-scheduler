@@ -1,1 +1,24 @@
 ﻿
+[2026-06-18 18:45 UTC] === Pinterest Publisher 2026-06-18 20h ===
+[2026-06-18 18:45 UTC] 5 pins a publier
+[2026-06-18 18:45 UTC]   publish_pin erreur tentative 1: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:45 UTC]   publish_pin erreur tentative 2: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:45 UTC]   publish_pin erreur tentative 3: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:45 UTC]   [1] ERREUR 0: {'error': 'echec apres 3 tentatives'}
+[2026-06-18 18:45 UTC]   publish_pin erreur tentative 1: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:45 UTC]   publish_pin erreur tentative 2: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:45 UTC]   publish_pin erreur tentative 3: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:45 UTC]   [2] ERREUR 0: {'error': 'echec apres 3 tentatives'}
+[2026-06-18 18:45 UTC]   publish_pin erreur tentative 1: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 2: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 3: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   [3] ERREUR 0: {'error': 'echec apres 3 tentatives'}
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 1: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 2: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 3: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   [4] ERREUR 0: {'error': 'echec apres 3 tentatives'}
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 1: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 2: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   publish_pin erreur tentative 3: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
+[2026-06-18 18:46 UTC]   [5] ERREUR 0: {'error': 'echec apres 3 tentatives'}
+[2026-06-18 18:46 UTC] === Termine: 0 publies | 5 erreurs ===
