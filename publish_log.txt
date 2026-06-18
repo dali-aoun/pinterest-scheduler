@@ -22,3 +22,5 @@
 [2026-06-18 18:46 UTC]   publish_pin erreur tentative 3: 'latin-1' codec can't encode character '\ufeff' in position 7: ordinal not in range(256)
 [2026-06-18 18:46 UTC]   [5] ERREUR 0: {'error': 'echec apres 3 tentatives'}
 [2026-06-18 18:46 UTC] === Termine: 0 publies | 5 erreurs ===
+[2026-06-18 18:47 UTC] === Pinterest Publisher 2026-06-18 20h ===
+[2026-06-18 18:47 UTC] Deja publie: 2026-06-18_20h — skip
