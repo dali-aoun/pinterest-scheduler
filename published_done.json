@@ -23,5 +23,11 @@
     "published": 5,
     "errors": 0,
     "total": 5
+  },
+  "2026-06-19_12h": {
+    "published": 5,
+    "errors": 0,
+    "total": 5,
+    "at": "2026-06-19T10:29:17.101291"
   }
 }
