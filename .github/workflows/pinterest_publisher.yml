@@ -2,15 +2,11 @@ name: Pinterest Publisher
 
 on:
   schedule:
-    # Tunisia = UTC+1
+    # 10 pins/jour : 2 slots x 5 pins (reduit depuis 20 pins/jour)
     # 08h Tunis = 07:00 UTC
     - cron: '0 7 * * *'
-    # 12h Tunis = 11:00 UTC
-    - cron: '0 11 * * *'
     # 17h Tunis = 16:00 UTC
     - cron: '0 16 * * *'
-    # 20h Tunis = 19:00 UTC
-    - cron: '0 19 * * *'
   workflow_dispatch:
 
 jobs:
