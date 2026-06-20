@@ -105,7 +105,7 @@ def main():
         best_diff = 999
         for sched_h, p in SCHED:
             diff = abs(now_min - sched_h * 60)
-            if diff <= 90 and diff < best_diff:
+            if diff <= 150 and diff < best_diff:
                 period, best_diff = p, diff
         if not period:
             log(f"Pas de slot pour UTC {now_utc.hour}h{now_utc.minute:02d} - skip")
