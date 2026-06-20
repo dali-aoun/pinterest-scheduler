@@ -2,12 +2,21 @@ name: Pinterest Publisher
 
 on:
   schedule:
-    # 10 pins/jour : 2 slots x 5 pins (reduit depuis 20 pins/jour)
+    # 10 pins/jour : 2 slots x 5 pins
     # 08h Tunis = 07:00 UTC
     - cron: '0 7 * * *'
     # 17h Tunis = 16:00 UTC
     - cron: '0 16 * * *'
   workflow_dispatch:
+    inputs:
+      target_date:
+        description: 'Date cible (ex: 2026-06-20) - vide = auto'
+        required: false
+        default: ''
+      period:
+        description: 'Slot (08h ou 17h) - vide = auto'
+        required: false
+        default: ''
 
 jobs:
   publish:
@@ -30,7 +39,14 @@ jobs:
       - name: Publish pins
         env:
           PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
-        run: python publish_period.py
+          TARGET_DATE: ${{ github.event.inputs.target_date }}
+          PERIOD: ${{ github.event.inputs.period }}
+        run: |
+          if [ -n "$TARGET_DATE" ] && [ -n "$PERIOD" ]; then
+            python publish_period.py "$TARGET_DATE" "$PERIOD"
+          else
+            python publish_period.py
+          fi
 
       - name: Commit state files
         run: |
