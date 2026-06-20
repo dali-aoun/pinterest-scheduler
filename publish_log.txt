@@ -38,3 +38,4 @@
 [2026-06-19 11:25 UTC] Deja publie: 2026-06-19_12h — skip
 [2026-06-19 18:04 UTC] Pas de slot pour UTC 18h04 - skip
 [2026-06-20 10:09 UTC] Pas de slot pour UTC 10h09 - skip
+[2026-06-20 17:41 UTC] Pas de slot pour UTC 17h41 - skip
