@@ -151,12 +151,26 @@ def main():
     published = 0
     errors    = 0
 
+    pin_images_dir = os.path.join(BASE_DIR, "pin_images")
+    local_pins = sorted(f for f in os.listdir(pin_images_dir) if f.endswith(".png")) if os.path.isdir(pin_images_dir) else []
+    pin_img_idx_file = os.path.join(BASE_DIR, "pin_img_idx.json")
+    try:
+        with open(pin_img_idx_file, "r") as f:
+            pin_img_state = json.load(f)
+    except Exception:
+        pin_img_state = {"idx": 0}
+
     for i, pin in enumerate(pins, 1):
         title      = pin.get("title", "")
         desc       = pin.get("description", "")
         board_name = pin.get("board", "")
         image_url  = pin.get("image", "")
         link       = pin.get("link", "https://smoothie.thehappy-healthy-life.com")
+
+        if local_pins:
+            idx = pin_img_state["idx"] % len(local_pins)
+            image_url = f"https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/master/pin_images/{local_pins[idx]}"
+            pin_img_state["idx"] = idx + 1
 
         board_id = get_board_id(board_name, headers, board_cache)
         if not board_id:
@@ -181,6 +195,13 @@ def main():
             json.dump(board_cache, f, indent=2)
     except Exception:
         pass
+
+    if local_pins:
+        try:
+            with open(pin_img_idx_file, "w") as f:
+                json.dump(pin_img_state, f)
+        except Exception:
+            pass
 
     done[period_key] = {
         "published": published,
