@@ -97,21 +97,19 @@ def main():
         target_date = sys.argv[1]
         period      = sys.argv[2]
     else:
-        # Tolérance ±90 min pour décalages GitHub Actions
-        # Slots UTC planifiés : 07h -> "08h", 16h -> "17h"
-        SCHED = [(7, "08h"), (16, "17h")]
-        now_min = now_utc.hour * 60 + now_utc.minute
-        period = None
-        best_diff = 999
-        for sched_h, p in SCHED:
-            diff = abs(now_min - sched_h * 60)
-            if diff <= 150 and diff < best_diff:
-                period, best_diff = p, diff
-        if not period:
-            log(f"Pas de slot pour UTC {now_utc.hour}h{now_utc.minute:02d} - skip")
-            sys.exit(0)
         target_date = now_tunis.strftime("%Y-%m-%d")
-        log(f"UTC {now_utc.hour}h{now_utc.minute:02d} -> slot {period} (decalage {best_diff}min)")
+        done = load_done()
+        slots = ["08h", "17h"]
+        period = None
+        for s in slots:
+            key = f"{target_date}_{s}"
+            if not done.get(key):
+                period = s
+                break
+        if not period:
+            log(f"Les 2 slots de {target_date} sont deja publies - skip")
+            sys.exit(0)
+        log(f"UTC {now_utc.hour}h{now_utc.minute:02d} -> prochain slot non publie: {period}")
 
     csv_file   = os.path.join(BASE_DIR, "csvs", f"period_{target_date}_{period}.csv")
     period_key = f"{target_date}_{period}"
