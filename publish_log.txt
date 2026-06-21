@@ -67,3 +67,4 @@
 [2026-06-21 10:31 UTC] === Termine: 5 publies | 0 erreurs ===
 [2026-06-21 11:24 UTC] === Pinterest Publisher 2026-06-21 17h ===
 [2026-06-21 11:24 UTC] Deja publie: 2026-06-21_17h — skip
+[2026-06-21 17:46 UTC] Les 2 slots de 2026-06-21 sont deja publies - skip
