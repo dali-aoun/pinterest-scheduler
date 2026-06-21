@@ -54,4 +54,5 @@ jobs:
           git config user.email "bot@noreply.github.com"
           git add published_done.json boards.json publish_log.txt
           git diff --cached --quiet || git commit -m "publish: $(date -u +%Y-%m-%d_%Hh)"
+          git pull --rebase origin master || true
           git push
