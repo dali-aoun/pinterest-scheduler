@@ -68,3 +68,12 @@
 [2026-06-21 11:24 UTC] === Pinterest Publisher 2026-06-21 17h ===
 [2026-06-21 11:24 UTC] Deja publie: 2026-06-21_17h — skip
 [2026-06-21 17:46 UTC] Les 2 slots de 2026-06-21 sont deja publies - skip
+[2026-06-22 10:11 UTC] UTC 10h11 -> prochain slot non publie: 08h
+[2026-06-22 10:11 UTC] === Pinterest Publisher 2026-06-22 08h ===
+[2026-06-22 10:11 UTC] 5 pins a publier
+[2026-06-22 10:11 UTC]   [1] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 10:11 UTC]   [2] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 10:11 UTC]   [3] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 10:11 UTC]   [4] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 10:11 UTC]   [5] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 10:11 UTC] === Termine: 0 publies | 5 erreurs ===
