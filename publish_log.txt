@@ -86,3 +86,4 @@
 [2026-06-22 12:51 UTC]   [4] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
 [2026-06-22 12:51 UTC]   [5] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
 [2026-06-22 12:51 UTC] === Termine: 0 publies | 5 erreurs ===
+[2026-06-22 16:10 UTC] Les 2 slots de 2026-06-22 sont deja publies - skip
