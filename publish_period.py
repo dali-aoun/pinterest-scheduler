@@ -203,13 +203,16 @@ def main():
         except Exception:
             pass
 
-    done[period_key] = {
-        "published": published,
-        "errors":    errors,
-        "total":     len(pins),
-        "at":        datetime.utcnow().isoformat()
-    }
-    save_done(done)
+    if published > 0:
+        done[period_key] = {
+            "published": published,
+            "errors":    errors,
+            "total":     len(pins),
+            "at":        datetime.utcnow().isoformat()
+        }
+        save_done(done)
+    else:
+        log(f"ATTENTION: 0 pins publies, slot NON marque comme fait (sera reessaye)")
     log(f"=== Termine: {published} publies | {errors} erreurs ===")
 
 
