@@ -77,3 +77,12 @@
 [2026-06-22 10:11 UTC]   [4] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
 [2026-06-22 10:11 UTC]   [5] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
 [2026-06-22 10:11 UTC] === Termine: 0 publies | 5 erreurs ===
+[2026-06-22 12:51 UTC] UTC 12h51 -> prochain slot non publie: 17h
+[2026-06-22 12:51 UTC] === Pinterest Publisher 2026-06-22 17h ===
+[2026-06-22 12:51 UTC] 5 pins a publier
+[2026-06-22 12:51 UTC]   [1] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 12:51 UTC]   [2] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 12:51 UTC]   [3] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 12:51 UTC]   [4] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 12:51 UTC]   [5] ERREUR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-06-22 12:51 UTC] === Termine: 0 publies | 5 erreurs ===
