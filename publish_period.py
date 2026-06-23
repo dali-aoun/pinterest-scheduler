@@ -169,7 +169,7 @@ def main():
 
         if local_pins:
             idx = pin_img_state["idx"] % len(local_pins)
-            image_url = f"https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/master/pin_images/{local_pins[idx]}"
+            image_url = f"https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/{local_pins[idx]}"
             pin_img_state["idx"] = idx + 1
 
         board_id = get_board_id(board_name, headers, board_cache)
