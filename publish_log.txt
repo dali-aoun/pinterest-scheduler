@@ -118,3 +118,12 @@
 [2026-06-23 08:00 UTC]   [5] ERREUR 400: {'code': 1, 'message': 'Sorry we could not fetch the image.'}
 [2026-06-23 08:00 UTC] ATTENTION: 0 pins publies, slot NON marque comme fait (sera reessaye)
 [2026-06-23 08:00 UTC] === Termine: 0 publies | 5 erreurs ===
+[2026-06-23 08:06 UTC] UTC 8h06 -> prochain slot non publie: 08h
+[2026-06-23 08:06 UTC] === Pinterest Publisher 2026-06-23 08h ===
+[2026-06-23 08:06 UTC] 5 pins a publier
+[2026-06-23 08:06 UTC]   [1] OK: Why Belly Fat After 50 Is Different — And Harder
+[2026-06-23 08:06 UTC]   [2] OK: 70% of women over 50 have some degree of insulin resistance
+[2026-06-23 08:06 UTC]   [3] OK: 5 Hidden Causes of Belly Fat After 50
+[2026-06-23 08:06 UTC]   [4] OK: Eating Salads and Still Gaining Belly Fat After 50?
+[2026-06-23 08:06 UTC]   [5] OK: 1 in 8 women over 50 have undiagnosed thyroid slowdown causi
+[2026-06-23 08:06 UTC] === Termine: 5 publies | 0 erreurs ===
