@@ -108,3 +108,13 @@
 [2026-06-22 22:50 UTC]   [5] ERREUR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write', 'pins:write']"}
 [2026-06-22 22:50 UTC] ATTENTION: 0 pins publies, slot NON marque comme fait (sera reessaye)
 [2026-06-22 22:50 UTC] === Termine: 0 publies | 5 erreurs ===
+[2026-06-23 08:00 UTC] UTC 8h00 -> prochain slot non publie: 08h
+[2026-06-23 08:00 UTC] === Pinterest Publisher 2026-06-23 08h ===
+[2026-06-23 08:00 UTC] 5 pins a publier
+[2026-06-23 08:00 UTC]   [1] ERREUR 400: {'code': 1, 'message': 'Sorry we could not fetch the image.'}
+[2026-06-23 08:00 UTC]   [2] ERREUR 400: {'code': 1, 'message': 'Sorry we could not fetch the image.'}
+[2026-06-23 08:00 UTC]   [3] ERREUR 400: {'code': 1, 'message': 'Sorry we could not fetch the image.'}
+[2026-06-23 08:00 UTC]   [4] ERREUR 400: {'code': 1, 'message': 'Sorry we could not fetch the image.'}
+[2026-06-23 08:00 UTC]   [5] ERREUR 400: {'code': 1, 'message': 'Sorry we could not fetch the image.'}
+[2026-06-23 08:00 UTC] ATTENTION: 0 pins publies, slot NON marque comme fait (sera reessaye)
+[2026-06-23 08:00 UTC] === Termine: 0 publies | 5 erreurs ===
