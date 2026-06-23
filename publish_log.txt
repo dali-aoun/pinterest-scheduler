@@ -136,3 +136,4 @@
 [2026-06-23 08:08 UTC]   [4] OK: Ashwagandha Changed My Cortisol (And My Belly)
 [2026-06-23 08:08 UTC]   [5] OK: 27% cortisol reduction from daily ashwagandha in clinical tr
 [2026-06-23 08:08 UTC] === Termine: 5 publies | 0 erreurs ===
+[2026-06-23 10:37 UTC] Les 2 slots de 2026-06-23 sont deja publies - skip
