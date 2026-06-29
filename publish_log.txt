@@ -228,3 +228,12 @@
 [2026-06-28 17:21 UTC]   [4] OK: The Bravest Thing You Can Do Is Try One More Time
 [2026-06-28 17:21 UTC]   [5] OK: 1 in 5 women who try the protocol had tried 10+ other approa
 [2026-06-28 17:21 UTC] === Termine: 5 publies | 0 erreurs ===
+[2026-06-29 09:04 UTC] UTC 9h04 -> next unpublished slot: 08h
+[2026-06-29 09:04 UTC] === Pinterest Auto-Publisher 2026-06-29 08h ===
+[2026-06-29 09:04 UTC]   [1] OK [Hormonal Belly Fat Tips]: 3 Signs Your Belly Fat Is Hormonal
+[2026-06-29 09:04 UTC]   [2] OK [Menopause Weight Loss Tips]: The Truth About Belly Fat After Menopause
+[2026-06-29 09:04 UTC]   [3] OK [Fat Burning Smoothies for Women Over 40]: The Natural Ozempic Smoothie
+[2026-06-29 09:04 UTC]   [4] OK [Morning Routines for Weight Loss]: The 2-Minute Morning Ritual for Weight Loss
+[2026-06-29 09:04 UTC]   [5] IDEA PIN ERROR 400: {'code': 1, 'message': "Invalid request: {'source_type': 'multiple_images', 'items': [{'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_05.png'}, {'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_06.png'}, {'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_07.png'}, {'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_08.png'}]} reference '#/components/schemas/multiple_images' could not be resolved (constraint: oneOf=[{'$ref': '#/components/schemas/PinMediaSourceImageBase64'}, {'$ref': '#/components/schemas/PinMediaSourceImageURL'}, {'$ref': '#/components/schemas/PinMediaSourceVideoID'}, {'$ref': '#/components/schemas/PinMediaSourceImagesBase64'}, {'$ref': '#/components/schemas/PinMediaSourceImagesURL'}, {'$ref': '#/components/schemas/PinMediaSourcePinURL'}])"}
+[2026-06-29 09:04 UTC]   [5] OK FALLBACK [Weight Loss for Women Over 40]: Walking 10K Steps Isn't Enough After 40
+[2026-06-29 09:04 UTC] === Done: 5 published | 0 errors ===
