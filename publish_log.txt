@@ -237,3 +237,11 @@
 [2026-06-29 09:04 UTC]   [5] IDEA PIN ERROR 400: {'code': 1, 'message': "Invalid request: {'source_type': 'multiple_images', 'items': [{'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_05.png'}, {'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_06.png'}, {'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_07.png'}, {'url': 'https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images/pin_08.png'}]} reference '#/components/schemas/multiple_images' could not be resolved (constraint: oneOf=[{'$ref': '#/components/schemas/PinMediaSourceImageBase64'}, {'$ref': '#/components/schemas/PinMediaSourceImageURL'}, {'$ref': '#/components/schemas/PinMediaSourceVideoID'}, {'$ref': '#/components/schemas/PinMediaSourceImagesBase64'}, {'$ref': '#/components/schemas/PinMediaSourceImagesURL'}, {'$ref': '#/components/schemas/PinMediaSourcePinURL'}])"}
 [2026-06-29 09:04 UTC]   [5] OK FALLBACK [Weight Loss for Women Over 40]: Walking 10K Steps Isn't Enough After 40
 [2026-06-29 09:04 UTC] === Done: 5 published | 0 errors ===
+[2026-06-29 09:38 UTC] UTC 9h38 -> next unpublished slot: 17h
+[2026-06-29 09:38 UTC] === Pinterest Auto-Publisher 2026-06-29 17h ===
+[2026-06-29 09:38 UTC]   [1] OK [Metabolism Boost After 40]: Your Metabolism Didn't Break — It Shifted
+[2026-06-29 09:38 UTC]   [2] OK [21-Day Smoothie Diet Recipes]: She Lost 18 lbs in 21 Days at 52
+[2026-06-29 09:38 UTC]   [3] OK [Anti-Inflammatory Diet Tips]: Joint Pain AND Weight Gain? They're Connected
+[2026-06-29 09:38 UTC]   [4] OK [Green Smoothie Detox for Women]: The Gut-Weight Connection After 40
+[2026-06-29 09:39 UTC]   [5] OK IDEA PIN [Natural Supplements & Wellness]: The 7am Morning Protocol for Fat Loss
+[2026-06-29 09:39 UTC] === Done: 5 published | 0 errors ===
