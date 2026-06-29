@@ -15,8 +15,24 @@ CONTENT_FILE = os.path.join(BASE_DIR, "pin_content.json")
 IMAGES_DIR = os.path.join(BASE_DIR, "pin_images")
 
 PINTEREST_TOKEN = os.environ.get("PINTEREST_ACCESS_TOKEN", "")
-FUNNEL_URL = "https://smoothie.thehappy-healthy-life.com"
 REPO_RAW = "https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images"
+
+LINK_POOL = [
+    "https://smoothie.thehappy-healthy-life.com",
+    "https://smoothie.thehappy-healthy-life.com/blog/cortisol-belly-fat",
+    "https://smoothie.thehappy-healthy-life.com/blog/menopause-weight-loss",
+    "https://smoothie.thehappy-healthy-life.com/blog/morning-routine",
+]
+
+BOARD_LINK_MAP = {
+    "Hormonal Belly Fat Tips": 1,
+    "Anti-Inflammatory Diet Tips": 1,
+    "Menopause Weight Loss Tips": 2,
+    "Before and After Transformations": 2,
+    "Morning Routines for Weight Loss": 3,
+    "Energy Boosters for Women 40+": 3,
+    "Metabolism Boosting Drinks Women Over 40": 3,
+}
 
 
 def log(msg):
@@ -202,9 +218,12 @@ def main():
             errors += 1
             continue
 
+        link_idx = BOARD_LINK_MAP.get(board_name, (i + state.get("board_order_idx", 0)) % len(LINK_POOL))
+        pin_link = LINK_POOL[link_idx]
+
         status, resp = publish_standard_pin(
             pin_data["title"], pin_data["desc"],
-            board_id, image_url, FUNNEL_URL, headers
+            board_id, image_url, pin_link, headers
         )
         if status in (200, 201):
             log(f"  [{i+1}] OK [{board_name}]: {pin_data['title'][:50]}")
@@ -251,7 +270,8 @@ def main():
                     fb_img = get_image_url(state)
                     fb_board_id = get_board_id(fb_board, headers, board_cache)
                     if fb_img and fb_board_id:
-                        st2, rp2 = publish_standard_pin(fb_pin["title"], fb_pin["desc"], fb_board_id, fb_img, FUNNEL_URL, headers)
+                        fb_link = LINK_POOL[BOARD_LINK_MAP.get(fb_board, state.get("board_order_idx", 0) % len(LINK_POOL))]
+                        st2, rp2 = publish_standard_pin(fb_pin["title"], fb_pin["desc"], fb_board_id, fb_img, fb_link, headers)
                         if st2 in (200, 201):
                             log(f"  [5] OK FALLBACK [{fb_board}]: {fb_pin['title'][:50]}")
                             published += 1
