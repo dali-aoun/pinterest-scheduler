@@ -98,7 +98,7 @@ def publish_idea_pin(title, pages_text, board_id, image_urls, headers):
         "description": " | ".join(pages_text)[:500],
         "board_id": board_id,
         "media_source": {
-            "source_type": "multiple_images",
+            "source_type": "multiple_image_urls",
             "items": items
         },
     }
