@@ -19,20 +19,9 @@ REPO_RAW = "https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs
 
 LINK_POOL = [
     "https://smoothie.thehappy-healthy-life.com",
-    "https://smoothie.thehappy-healthy-life.com/blog/cortisol-belly-fat",
-    "https://smoothie.thehappy-healthy-life.com/blog/menopause-weight-loss",
-    "https://smoothie.thehappy-healthy-life.com/blog/morning-routine",
 ]
 
-BOARD_LINK_MAP = {
-    "Hormonal Belly Fat Tips": 1,
-    "Anti-Inflammatory Diet Tips": 1,
-    "Menopause Weight Loss Tips": 2,
-    "Before and After Transformations": 2,
-    "Morning Routines for Weight Loss": 3,
-    "Energy Boosters for Women 40+": 3,
-    "Metabolism Boosting Drinks Women Over 40": 3,
-}
+BOARD_LINK_MAP = {}  # All boards use index 0 (main bridge page)
 
 
 def log(msg):
