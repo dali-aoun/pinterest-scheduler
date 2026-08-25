@@ -509,3 +509,13 @@
 [2026-08-25 07:36 UTC]   [5] FALLBACK ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
 [2026-08-25 07:36 UTC] WARNING: 0 pins published, slot NOT marked as done (will retry)
 [2026-08-25 07:36 UTC] === Done: 0 published | 5 errors ===
+[2026-08-25 16:22 UTC] UTC 16h22 -> next unpublished slot: 08h
+[2026-08-25 16:22 UTC] === Pinterest Auto-Publisher 2026-08-25 08h ===
+[2026-08-25 16:22 UTC]   [1] ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-08-25 16:22 UTC]   [2] ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-08-25 16:22 UTC]   [3] ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-08-25 16:22 UTC]   [4] ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-08-25 16:22 UTC]   [5] IDEA PIN ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-08-25 16:22 UTC]   [5] FALLBACK ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-08-25 16:22 UTC] WARNING: 0 pins published, slot NOT marked as done (will retry)
+[2026-08-25 16:22 UTC] === Done: 0 published | 5 errors ===
