@@ -539,3 +539,13 @@
 [2026-08-26 16:40 UTC]   [5] FALLBACK ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
 [2026-08-26 16:40 UTC] WARNING: 0 pins published, slot NOT marked as done (will retry)
 [2026-08-26 16:40 UTC] === Done: 0 published | 5 errors ===
+[2026-08-27 11:01 UTC] UTC 11h01 -> next unpublished slot: 08h
+[2026-08-27 11:01 UTC] === Pinterest Auto-Publisher 2026-08-27 08h ===
+[2026-08-27 11:01 UTC]   [1] ERROR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write']"}
+[2026-08-27 11:01 UTC]   [2] ERROR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write']"}
+[2026-08-27 11:01 UTC]   [3] ERROR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write']"}
+[2026-08-27 11:01 UTC]   [4] ERROR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write']"}
+[2026-08-27 11:01 UTC]   [5] IDEA PIN ERROR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write']"}
+[2026-08-27 11:01 UTC]   [5] FALLBACK ERROR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write']"}
+[2026-08-27 11:01 UTC] WARNING: 0 pins published, slot NOT marked as done (will retry)
+[2026-08-27 11:01 UTC] === Done: 0 published | 5 errors ===
