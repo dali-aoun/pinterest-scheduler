@@ -549,3 +549,11 @@
 [2026-08-27 11:01 UTC]   [5] FALLBACK ERROR 401: {'code': 3, 'message': "Your token does not have sufficient permissions to perform this operation. Please ensure your token is authorized with the correct set of scopes. Missing: ['boards:write']"}
 [2026-08-27 11:01 UTC] WARNING: 0 pins published, slot NOT marked as done (will retry)
 [2026-08-27 11:01 UTC] === Done: 0 published | 5 errors ===
+[2026-08-27 11:37 UTC] UTC 11h37 -> next unpublished slot: 08h
+[2026-08-27 11:37 UTC] === Pinterest Auto-Publisher 2026-08-27 08h ===
+[2026-08-27 11:37 UTC]   [1] OK [Natural Supplements & Wellness]: Ashwagandha Changed My Cortisol and My Belly
+[2026-08-27 11:37 UTC]   [2] OK [Motivation & Mindset]: The Moment I Stopped Fighting My Body
+[2026-08-27 11:37 UTC]   [3] OK [Energy Boosters for Women 40+]: 5 AM Wake-Up and Can't Fall Back Asleep
+[2026-08-27 11:37 UTC]   [4] OK [Weight Loss Tips for Women Over 40]: Brain Fog and Weight Gain Share the Same Cause
+[2026-08-27 11:37 UTC]   [5] OK IDEA PIN [Fat Burning Foods & Drinks]: 5 Signs Your Belly Fat Is Hormonal
+[2026-08-27 11:37 UTC] === Done: 5 published | 0 errors ===
