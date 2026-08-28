@@ -18,7 +18,7 @@ PINTEREST_TOKEN = os.environ.get("PINTEREST_ACCESS_TOKEN", "")
 REPO_RAW = "https://raw.githubusercontent.com/dali-aoun/pinterest-scheduler/refs/heads/master/pin_images"
 
 LINK_POOL = [
-    "https://smoothie.thehappy-healthy-life.com",
+    "https://smoothie.thehappy-healthy-life.com/?utm_source=pinterest&utm_medium=pin&utm_campaign=organic",
 ]
 
 BOARD_LINK_MAP = {}  # All boards use index 0 (main bridge page)
