@@ -601,3 +601,11 @@
 [2026-08-29 12:53 UTC]   [5] OK IDEA PIN [Hormonal Belly Fat Tips]: The Anti-Inflammatory Smoothie Recipe
 [2026-08-29 12:53 UTC] === Done: 5 published | 0 errors ===
 [2026-08-29 18:57 UTC] Both slots for 2026-08-29 already published - skip
+[2026-08-30 12:26 UTC] UTC 12h26 -> next unpublished slot: 08h
+[2026-08-30 12:26 UTC] === Pinterest Auto-Publisher 2026-08-30 08h ===
+[2026-08-30 12:26 UTC]   [1] OK [Menopause Weight Loss Tips]: Perimenopause Weight Gain Explained Simply
+[2026-08-30 12:26 UTC]   [2] OK [Fat Burning Smoothies for Women Over 40]: The Cortisol-Lowering Morning Smoothie
+[2026-08-30 12:26 UTC]   [3] OK [Morning Routines for Weight Loss]: What to Eat Before 9am to Burn Fat All Day
+[2026-08-30 12:26 UTC]   [4] OK [Weight Loss for Women Over 40]: 10 lbs in 3 Weeks Without Cutting Calories
+[2026-08-30 12:27 UTC]   [5] OK IDEA PIN [Metabolism Boost After 40]: 5 Signs Your Belly Fat Is Hormonal
+[2026-08-30 12:27 UTC] === Done: 5 published | 0 errors ===
