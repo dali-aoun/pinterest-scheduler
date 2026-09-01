@@ -222,30 +222,57 @@ def main():
             errors += 1
         time.sleep(3)
 
-    # Publish 5th standard pin (idea pins disabled — Pinterest auto-adds copyrighted music)
-    board_idx_5 = (state.get("board_order_idx", 0) + 4) % len(board_names)
-    board_name_5 = board_names[board_idx_5]
-    pins_pool_5 = boards_content[board_name_5]
-    content_idx_5 = state.get("content_idx", 0) % len(pins_pool_5)
-    pin_data_5 = pins_pool_5[content_idx_5]
-    state["content_idx"] = content_idx_5 + 1
-    image_url_5 = get_image_url(state)
-    board_id_5 = get_board_id(board_name_5, headers, board_cache)
-    if image_url_5 and board_id_5:
-        link_5 = LINK_POOL[(state.get("board_order_idx", 0) + 4) % len(LINK_POOL)]
-        status, resp = publish_standard_pin(
-            pin_data_5["title"], pin_data_5["desc"],
-            board_id_5, image_url_5, link_5, headers
-        )
-        if status in (200, 201):
-            log(f"  [5] OK [{board_name_5}]: {pin_data_5['title'][:50]}")
-            published += 1
+    # Publish 1 idea pin (multi-image, no link — boosts algorithm)
+    if idea_sets:
+        idea_idx = state.get("idea_idx", 0) % len(idea_sets)
+        idea = idea_sets[idea_idx]
+        state["idea_idx"] = idea_idx + 1
+
+        idea_images = []
+        for _ in range(min(len(idea["pages"]), 4)):
+            img = get_image_url(state)
+            if img:
+                idea_images.append(img)
+
+        if len(idea_images) >= 2:
+            idea_board_idx = (state.get("board_order_idx", 0) + 4) % len(board_names)
+            idea_board = board_names[idea_board_idx]
+            idea_board_id = get_board_id(idea_board, headers, board_cache)
+
+            if idea_board_id:
+                status, resp = publish_idea_pin(
+                    idea["title"], idea["pages"],
+                    idea_board_id, idea_images, headers
+                )
+                if status in (200, 201):
+                    log(f"  [5] OK IDEA PIN [{idea_board}]: {idea['title'][:50]}")
+                    published += 1
+                else:
+                    log(f"  [5] IDEA PIN ERROR {status}: {resp}")
+                    # Fallback: publish as standard pin instead
+                    fallback_board_idx = (state.get("board_order_idx", 0) + 4) % len(board_names)
+                    fb_board = board_names[fallback_board_idx]
+                    fb_pins = boards_content[fb_board]
+                    fb_idx = state.get("content_idx", 0) % len(fb_pins)
+                    fb_pin = fb_pins[fb_idx]
+                    state["content_idx"] = fb_idx + 1
+                    fb_img = get_image_url(state)
+                    fb_board_id = get_board_id(fb_board, headers, board_cache)
+                    if fb_img and fb_board_id:
+                        fb_link = LINK_POOL[BOARD_LINK_MAP.get(fb_board, state.get("board_order_idx", 0) % len(LINK_POOL))]
+                        st2, rp2 = publish_standard_pin(fb_pin["title"], fb_pin["desc"], fb_board_id, fb_img, fb_link, headers)
+                        if st2 in (200, 201):
+                            log(f"  [5] OK FALLBACK [{fb_board}]: {fb_pin['title'][:50]}")
+                            published += 1
+                        else:
+                            log(f"  [5] FALLBACK ERROR {st2}: {rp2}")
+                            errors += 1
+                    else:
+                        errors += 1
+            else:
+                errors += 1
         else:
-            log(f"  [5] ERROR {status}: {resp}")
             errors += 1
-    else:
-        log(f"  [5] ERROR: no image or board for {board_name_5}")
-        errors += 1
 
     state["board_order_idx"] = (state.get("board_order_idx", 0) + 5) % len(board_names)
 
