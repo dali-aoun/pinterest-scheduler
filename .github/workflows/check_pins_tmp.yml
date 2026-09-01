@@ -1,0 +1,40 @@
+name: Check Muted Pins
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find idea pins audio status
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: |
+          cursor=""
+          page=1
+          while true; do
+            if [ -z "$cursor" ]; then
+              RESP=$(curl -s "https://api.pinterest.com/v5/pins?page_size=100" -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN")
+            else
+              RESP=$(curl -s "https://api.pinterest.com/v5/pins?page_size=100&bookmark=$cursor" -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN")
+            fi
+            COUNT=$(echo $RESP | python3 -c "import sys,json; print(len(json.load(sys.stdin).get("items",[])))")
+            echo "Page $page: $COUNT pins"
+            echo $RESP | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+for pin in d.get("items", []):
+    media = pin.get("media", {})
+    media_type = media.get("media_type", "")
+    if media_type in ["video", "idea", "multiple_images"]:
+        pin_id = pin.get("id", "")
+        title = pin.get("title", "")[:50]
+        status = media.get("status", "ok")
+        print(f"IDEA|{pin_id}|{title}|{media_type}|{status}")
+"
+            cursor=$(echo $RESP | python3 -c "import sys,json; d=json.load(sys.stdin); bk=d.get("bookmark",""); print(bk if bk else "")")
+            [ -z "$cursor" ] && break
+            [ $page -ge 20 ] && break
+            page=$((page+1))
+            sleep 1
+          done
+          echo "DONE"
