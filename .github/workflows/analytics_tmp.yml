@@ -1,0 +1,32 @@
+name: Analytics Check
+on:
+  workflow_dispatch:
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Pinterest Analytics
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          START=$(date -u -d "30 days ago" +%Y-%m-%d 2>/dev/null || date -u -v-30d +%Y-%m-%d)
+          echo "=== USER ACCOUNT ==="
+          curl -s "https://api.pinterest.com/v5/user_account" \
+            -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          print(f'Username: {d.get(\"username\")}')
+          print(f'Followers: {d.get(\"follower_count\")}')
+          print(f'Following: {d.get(\"following_count\")}')
+          print(f'Monthly views: {d.get(\"monthly_views\")}')
+          print(f'Pin count: {d.get(\"pin_count\")}')
+          "
+          echo ""
+          echo "=== ANALYTICS (last 30 days) ==="
+          curl -s "https://api.pinterest.com/v5/user_account/analytics?start_date=${START}&end_date=${TODAY}&metric_types=IMPRESSION,ENGAGEMENT,PIN_CLICK,OUTBOUND_CLICK,SAVE" \
+            -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN" | python3 -c "
+          import sys, json
+          d = json.load(sys.stdin)
+          print(json.dumps(d, indent=2))
+          " 2>/dev/null || echo "Analytics API error"
