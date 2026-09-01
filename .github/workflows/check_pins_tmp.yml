@@ -1,0 +1,49 @@
+name: Check Muted Pins
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Find all idea pins and check audio status
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: |
+          echo "=== Fetching all pins ==="
+          # Get pins page by page
+          cursor=""
+          page=1
+          while true; do
+            if [ -z "$cursor" ]; then
+              RESP=$(curl -s "https://api.pinterest.com/v5/pins?page_size=100&pin_type=ALL" \
+                -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN")
+            else
+              RESP=$(curl -s "https://api.pinterest.com/v5/pins?page_size=100&pin_type=ALL&bookmark=$cursor" \
+                -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN")
+            fi
+            echo "Page $page: $(echo $RESP | python3 -c 'import sys,json; d=json.load(sys.stdin); print(len(d.get("items",[])), "pins")')"
+            # Check for idea pins with audio issues
+            echo $RESP | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+for pin in d.get('items', []):
+    media = pin.get('media', {})
+    media_type = media.get('media_type', '')
+    pin_id = pin.get('id', '')
+    title = pin.get('title', '')[:40]
+    # Check if it's an idea pin (video or multiple images)
+    if media_type in ['video', 'idea']:
+        status = media.get('status', 'unknown')
+        print(f'IDEA PIN: {pin_id} | {title} | media_type={media_type} | status={status}')
+"
+            cursor=$(echo $RESP | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('bookmark',''))" 2>/dev/null)
+            if [ -z "$cursor" ] || [ "$cursor" = "None" ]; then
+              break
+            fi
+            page=$((page+1))
+            if [ $page -gt 20 ]; then
+              echo "Max pages reached"
+              break
+            fi
+            sleep 1
+          done
