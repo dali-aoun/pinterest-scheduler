@@ -1,0 +1,35 @@
+name: Analytics Fetch Tmp
+on:
+  workflow_dispatch:
+jobs:
+  analytics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch Analytics
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: |
+          TODAY=$(date -u +%Y-%m-%d)
+          START=$(date -u -d "30 days ago" +%Y-%m-%d)
+          echo "=== USER ACCOUNT ==="
+          curl -s "https://api.pinterest.com/v5/user_account" \
+            -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN" | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+print(f'Followers: {d.get(\"follower_count\")}')
+print(f'Monthly views: {d.get(\"monthly_views\")}')
+print(f'Pin count: {d.get(\"pin_count\")}')
+"
+          echo ""
+          echo "=== ANALYTICS 30j ==="
+          curl -s "https://api.pinterest.com/v5/user_account/analytics?start_date=${START}&end_date=${TODAY}&metric_types=IMPRESSION,ENGAGEMENT,PIN_CLICK,OUTBOUND_CLICK,SAVE" \
+            -H "Authorization: Bearer $PINTEREST_ACCESS_TOKEN" | python3 -c "
+import sys, json
+d = json.load(sys.stdin)
+m = d.get('all', {}).get('summary_metrics', {})
+print(f'Impressions    : {m.get(\"IMPRESSION\",0):,}')
+print(f'Engagements    : {m.get(\"ENGAGEMENT\",0):,}')
+print(f'Pin Clicks     : {m.get(\"PIN_CLICK\",0):,}')
+print(f'Saves          : {m.get(\"SAVE\",0):,}')
+print(f'Outbound Clicks: {m.get(\"OUTBOUND_CLICK\",0):,}')
+"
