@@ -785,3 +785,10 @@
 [2026-09-10 11:58 UTC]   [4] OK [Hormonal Belly Fat Tips]: 3 Signs Your Belly Fat Is Hormonal
 [2026-09-10 11:58 UTC]   [5] OK IDEA PIN [Menopause Weight Loss Tips]: Why Diets Fail Women Over 40
 [2026-09-10 11:58 UTC] === Done: 5 published | 0 errors ===
+[2026-09-10 18:46 UTC] UTC 18h46 -> next unpublished slot: 17h
+[2026-09-10 18:46 UTC] === Pinterest Auto-Publisher 2026-09-10 17h ===
+[2026-09-10 18:46 UTC]   [1] ERROR: board not found: Morning Coffee Metabolism Tips for Women 40+
+[2026-09-10 18:46 UTC]   [2] OK [Morning Routines for Weight Loss]: Morning Routines of Women Who Lost 20+ lbs After 4
+[2026-09-10 18:46 UTC]   [3] OK [Weight Loss for Women Over 40]: Weight Loss After 40: How Long Does It Actually Ta
+[2026-09-10 18:46 UTC]   OK IDEA PIN [Metabolism Boost After 40]: Java Burn vs Other Methods (Women 40+)
+[2026-09-10 18:46 UTC] === Done: 3 published | 2 errors ===
