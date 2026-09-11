@@ -1,0 +1,28 @@
+name: Fill New Boards
+
+on:
+  workflow_dispatch:
+
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install deps
+        run: pip install requests
+      - name: Fill new boards
+        env:
+          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+        run: python fill_new_boards.py
+      - name: Save state
+        if: always()
+        run: |
+          git config user.name "pinterest-bot"
+          git config user.email "bot@noreply.github.com"
+          git add publish_log.txt pin_auto_state.json || true
+          git diff --cached --quiet && exit 0
+          git commit -m "fill: new boards $(date -u +%Y-%m-%d_%Hh)"
+          git push origin master
