@@ -147,6 +147,7 @@ def publish_one_idea_pin(idea_sets, state, board_names, boards_content, headers,
     idea_board_id = get_board_id(idea_board, headers, board_cache)
 
     if not idea_board_id:
+        log(f"  IDEA PIN SKIP: board not found in cache/API: {idea_board}")
         return 0, 1
 
     status, resp = publish_idea_pin(
