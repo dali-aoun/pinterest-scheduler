@@ -1599,3 +1599,12 @@
 [2026-10-31 13:11 UTC]   OK IDEA PIN [Java Burn Coffee Ritual Recipes]: Real Weight Loss Timeline at 40, 50, 60+
 [2026-10-31 13:11 UTC]   OK IDEA PIN [Anti-Inflammatory Diet Tips]: Why Your Scale Lies to Women Over 40
 [2026-10-31 13:11 UTC] === Done: 5 published | 0 errors ===
+[2026-10-31 19:36 UTC] UTC 19h36 -> next unpublished slot: 17h
+[2026-10-31 19:36 UTC] === Pinterest Auto-Publisher 2026-10-31 17h ===
+[2026-10-31 19:36 UTC]   [1] ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-10-31 19:36 UTC]   [2] ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-10-31 19:36 UTC]   [3] ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-10-31 19:36 UTC]   IDEA PIN ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-10-31 19:36 UTC]   IDEA PIN ERROR 401: {'code': 2, 'message': 'Authentication failed.', 'status': 'failure'}
+[2026-10-31 19:36 UTC] WARNING: 0 pins published, slot NOT marked as done (will retry)
+[2026-10-31 19:36 UTC] === Done: 0 published | 5 errors ===
